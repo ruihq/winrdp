@@ -12,7 +12,7 @@ jobs:
     - name: Installing prerequisites
       run: |
         Invoke-WebRequest https://github.com/ruihq/winrdp/blob/main/resources/ngrok.zip?raw=true -OutFile ngrok.zip
-        Invoke-WebRequest https://github.com/ruihq/winrdp/blob/main/resources/start.bat?raw=true -OutFile start.bat
+        Invoke-WebRequest https://github.com/ruihq/winrdp/raw/main/resources/start.bat -OutFile start.bat
         Invoke-WebRequest https://github.com/ruihq/winrdp/blob/main/resources/winrar.exe?raw=true -OutFile winrar.exe
 
     - name: Extract ngrok
@@ -41,5 +41,5 @@ jobs:
       
     - name: loop
       run: |
-        Invoke-WebRequest https://github.com/ruihq/winrdp/blob/main/resources/loop.ps1?raw=true -OutFile loop.ps1
+        Invoke-WebRequest https://github.com/ruihq/winrdp/raw/main/resources/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
